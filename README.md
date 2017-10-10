@@ -39,7 +39,7 @@ Prototype Schematic
 You may also choose to run the sample on an Edison developer kit, with the
 necessary peripherals connected as shown below:
 
-![Schematic for Edison Candle Prototype](Application/candle_schematics.png)
+![Schematic for Edison Candle Prototype](candle_schematics.png)
 
 License
 -------
