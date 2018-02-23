@@ -23,7 +23,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.animation.BounceInterpolator;
 
-import com.google.android.things.pio.PeripheralManagerService;
+import com.google.android.things.pio.PeripheralManager;
 import com.google.android.things.pio.Pwm;
 
 import java.io.IOException;
@@ -87,8 +87,7 @@ public class HomeActivity extends Activity {
      * @throws IOException
      */
     private Pwm openLed(String name) throws IOException {
-        PeripheralManagerService service = new PeripheralManagerService();
-        Pwm led = service.openPwm(name);
+        Pwm led = PeripheralManager.getInstance().openPwm(name);
         led.setPwmFrequencyHz(60.0f);
         led.setPwmDutyCycle(BRIGHTNESS_START);
         led.setEnabled(true);
